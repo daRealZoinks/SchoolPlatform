@@ -1,0 +1,32 @@
+﻿<Window x:Class="View.Views.AdministratorWindows.SubjectCRUDWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:administratorCommands="clr-namespace:View.ViewModels.Commands.AdministratorCommands"
+        mc:Ignorable="d"
+        Title="SubjectCRUDWindow" Height="450" Width="800">
+    <Window.Resources>
+        <administratorCommands:AdministratorSubjectCommands x:Key="AdministratorSubjectCommands" />
+    </Window.Resources>
+
+    <Grid DataContext="{Binding Source={StaticResource AdministratorSubjectCommands}}">
+        <ListView Name="SubjectListView" Margin="0,0,0,102" ItemsSource="{Binding Subjects}">
+            <ListView.View>
+                <GridView AllowsColumnReorder="true">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Name="InsertButton" Content="Insert" HorizontalAlignment="Left" Margin="200,0,0,30"
+                VerticalAlignment="Bottom" Height="37" Width="72" Command="{Binding InsertSubjectCommand}" />
+        <Button Name="DeleteButton" Content="Delete" HorizontalAlignment="Center" Margin="0,0,0,30"
+                VerticalAlignment="Bottom" Height="37" Width="72" Command="{Binding DeleteSubjectCommand}"
+                CommandParameter="{Binding ElementName=SubjectListView, Path=SelectedItem}" />
+        <Button Name="UpdateButton" Content="Update" HorizontalAlignment="Right" Margin="0,0,200,30"
+                VerticalAlignment="Bottom" Height="37" Width="72" Command="{Binding UpdateSubjectCommand}"
+                CommandParameter="{Binding ElementName=SubjectListView, Path=SelectedItem}" />
+
+    </Grid>
+</Window>

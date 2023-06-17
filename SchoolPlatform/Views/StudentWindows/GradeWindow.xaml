@@ -1,0 +1,24 @@
+﻿<Window x:Class="View.Views.StudentWindows.GradeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:studentCommands="clr-namespace:View.ViewModels.Commands.StudentCommands"
+        mc:Ignorable="d"
+        Title="GradeWindow" Height="450" Width="800">
+    <Window.Resources>
+        <studentCommands:StudentGradeCommands x:Key="StudentGradeCommands" />
+    </Window.Resources>
+    <Grid DataContext="{Binding Source={StaticResource StudentGradeCommands}}">
+        <ListView ItemsSource="{Binding Grades}">
+            <ListView.View>
+                <GridView AllowsColumnReorder="true">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Date}" Header="Date" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Subject}" Header="Subject" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Value}" Header="Value" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=IsThesis}" Header="IsThesis" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

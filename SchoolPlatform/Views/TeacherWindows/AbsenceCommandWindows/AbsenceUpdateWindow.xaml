@@ -1,0 +1,33 @@
+﻿<Window x:Class="View.Views.TeacherWindows.AbsenceCommandWindows.AbsenceUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="AbsenceUpdateWindow" Height="450" Width="450">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Student" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <ComboBox Name="StudentComboBox" Width="180" Height="18" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Subject" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <ComboBox Name="SubjectComboBox" Width="180" Height="18" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Date" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <Calendar Name="DateCalendar" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Motivated" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <CheckBox Name="MotivatedCheckBox" HorizontalAlignment="Center"
+                              VerticalAlignment="Top" Width="180" Height="18" HorizontalContentAlignment="Center"
+                              VerticalContentAlignment="Center" />
+                </StackPanel>
+            </StackPanel>
+            <Button Content="Update" HorizontalAlignment="Center" Click="UpdateButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="View.Views.AdministratorWindows.ClassCommandWindows.ClassUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ClassUpdateWindow" Height="450" Width="450">
+    <Grid>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <TextBox Name="NameTextBox" HorizontalAlignment="Center" TextWrapping="NoWrap"
+                             VerticalAlignment="Top" Width="180" Height="18" HorizontalContentAlignment="Center"
+                             VerticalContentAlignment="Center" />
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Specialization" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <ComboBox Name="SpecializationComboBox" Width="180" Height="18" />
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Year" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <ComboBox Name="YearComboBox" Width="180" Height="18" />
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="ClassMaster" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <ComboBox Name="ClassMasterComboBox" Width="180" Height="18" />
+                </StackPanel>
+            </StackPanel>
+            <Button Name="UpdateButton" Content="Update" HorizontalAlignment="Center" Click="UpdateButton_Click" />
+        </StackPanel>
+
+    </Grid>
+</Window>

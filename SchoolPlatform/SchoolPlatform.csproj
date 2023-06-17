@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Views\TeacherWindows\AbsenceCommandWindows\AbsenceInsertWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\AbsenceCommandWindows\AbsenceUpdateWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\AbsenceCRUDWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\AverageCommandWindows\AverageInsertWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\AverageCommandWindows\AverageUpdateWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\AverageCRUDWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\GradeCommandWindows\GradeInsertWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\GradeCommandWindows\GradeUpdateWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Views\TeacherWindows\GradeCRUDWindow.xaml.cs">
+            <SubType>Code</SubType>
+        </Compile>
+    </ItemGroup>
+
+</Project>

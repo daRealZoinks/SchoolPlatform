@@ -1,0 +1,22 @@
+﻿<Window x:Class="View.Views.ClassMasterWindows.ClassMasterMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ClassMasterMainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Name="ClassMasterLabel" Content="ClassMaster" HorizontalAlignment="Center" Margin="0,70,0,0"
+               VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Name="ClassLabel" Content="Class" HorizontalAlignment="Center" Margin="0,101,0,0"
+               VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Motivate Absences" Height="37" Click="MotivateAbsencesButton_OnClick" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="View Averages" Height="37" Click="ViewAveragesButton_OnClick" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
